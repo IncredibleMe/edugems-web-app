@@ -1,0 +1,136 @@
+.dark-primary-color {
+  background: #512DA8;
+}
+
+.default-primary-color {
+  background: #673AB7;
+}
+
+.light-primary-color {
+  background: #D1C4E9;
+}
+
+.text-primary-color {
+  color: #FFFFFF;
+}
+
+.accent-color {
+  background: #536DFE;
+}
+
+.primary-text-color {
+  color: #212121;
+}
+
+.secondary-text-color {
+  color: #727272;
+}
+
+.divider-color {
+  border-color: #B6B6B6;
+}
+
+.alter-color {
+  background: #22597E;
+}
+
+#wholepage {
+  width: auto;
+  height: auto;
+  background: url("./images/mybb.jpg") no-repeat center center fixed;
+  opacity: .99;
+  z-index: -3;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#homecenter {
+  background: url("./images/girl.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+  position: relative;
+  filter: brightness(80%);
+  -webkit-filter: brightness(80%);
+  -moz-filter: brightness(80%);
+  -o-filter: brightness(80%);
+  -ms-filter: brightness(80%);
+  opacity: 0.9;
+  /*box-shadow: 0px 7px 5px #2d2626;*/
+  -webkit-box-shadow: 0px 10px 12px 0px rgba(46, 50, 50, 0.75);
+  -moz-box-shadow: 0px 10px 12px 0px rgba(46, 50, 50, 0.75);
+  box-shadow: 0px 10px 12px 0px rgba(46, 50, 50, 0.75);
+}
+
+#inner {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 240px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+#titleh {
+  color: white;
+  font-weight: 900;
+  font-size: 50px;
+  margin: 0px -50px;
+}
+
+hr {
+  display: block;
+  size: 10px;
+  width: 360px;
+  border-top: 3px solid white;
+  margin: 32px -110px;
+}
+
+#inner p {
+  color: white;
+  font-size: 20px;
+  width: 600px;
+  height: auto;
+  letter-spacing: 0.225em;
+  text-transform: uppercase;
+  margin: 12px -200px;
+}
+
+.learn-more-bt {
+  margin-top: 50px;
+  width: 170px;
+  height: 55px;
+  background: #673AB7 !important;
+}
+
+.pageinfo {
+  height: 250px;
+  text-align: center;
+  padding-top: 25%;
+}
+
+.middleinfo {
+  float: left;
+  margin-right: 80px;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+.pg-footer {
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0px -10px 12px 0px rgba(46, 50, 50, 0.75);
+  -moz-box-shadow: 0px -10px 12px 0px rgba(46, 50, 50, 0.75);
+  box-shadow: 0px -10px 12px 0px rgba(46, 50, 50, 0.75);
+}
