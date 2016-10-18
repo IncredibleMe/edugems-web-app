@@ -12,6 +12,7 @@ import {RouterModule} from "@angular/router";
 import {ProfileComponent} from "./profile/profile.component";
 import {LoggedInGuard} from "./logged-in.guard";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {ApiService} from "./api.service";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
       {path: '**', component: PageNotFoundComponent}
     ])
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
