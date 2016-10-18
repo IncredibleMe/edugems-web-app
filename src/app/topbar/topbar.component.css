@@ -1,0 +1,49 @@
+.dark-primary-color {
+  background: #22597E;
+}
+
+.default-primary-color {
+  background: #673AB7;
+}
+
+.light-primary-color {
+  background: #D1C4E9;
+}
+
+.text-primary-color {
+  color: #FFFFFF;
+}
+
+.accent-color {
+  background: #536DFE;
+}
+
+.primary-text-color {
+  color: #212121;
+}
+
+.secondary-text-color {
+  color: #727272;
+}
+
+.divider-color {
+  border-color: #B6B6B6;
+}
+
+#logo-container {
+  font-size: 32px;
+  position: absolute;
+}
+
+.nav-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.menub {
+  color: white;
+}
+
+a {
+  color: #FFFFFF;
+}
