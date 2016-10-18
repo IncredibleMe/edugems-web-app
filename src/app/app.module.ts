@@ -38,7 +38,7 @@ import {ApiService} from "./api.service";
       {path: '**', component: PageNotFoundComponent}
     ])
   ],
-  providers: [ApiService],
+  providers: [ApiService, LoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
