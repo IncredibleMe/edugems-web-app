@@ -3,7 +3,7 @@
   <div id="form__elements--center">
     <p>Welcome to EduGems!</p>
 
-    <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
+    <form #form="ngForm" (ngSubmit)="register(form.value)">
       <div class="form-group">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
           <input name="username" class="mdl-textfield__input" type="text" id="username" ngModel>

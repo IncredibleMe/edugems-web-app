@@ -21,11 +21,10 @@ export class RegisterComponent implements OnInit {
     this.api.register(form).subscribe(
       (result) => {
         if (result) {
-          this.router.navigate(['home']);
+          this.router.navigate(['login']);
         }
       },
       error => {
-        alert(error.text());
         console.log(error.text());
       });
   }
