@@ -1,0 +1,84 @@
+.dark-primary-color {
+  background: #512DA8;
+}
+
+.default-primary-color {
+  background: #673AB7;
+}
+
+.light-primary-color {
+  background: #D1C4E9;
+}
+
+.text-primary-color {
+  color: #FFFFFF;
+}
+
+.accent-color {
+  background: #536DFE;
+}
+
+.primary-text-color {
+  color: #212121;
+}
+
+.secondary-text-color {
+  color: #727272;
+}
+
+.divider-color {
+  border-color: #B6B6B6;
+}
+
+.alter-color {
+  background: #22597E;
+}
+
+#wholepage {
+  background: url("./images/mybb.jpg") no-repeat center center fixed;
+  opacity: .99;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.login-choise-bt {
+  margin-top: 50px;
+  width: 170px;
+  height: 55px;
+  background: #673AB7 !important;
+}
+
+#form__elements--center {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.floating {
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/*:host input.md-input-element {*/
+/*position: absolute;*/
+/*height: 2px;*/
+/*z-index: 1;*/
+/*background-color: #bd4163 !important;*/
+
+/*}*/
