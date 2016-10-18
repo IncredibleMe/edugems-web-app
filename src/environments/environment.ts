@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiURL: 'http://api.edugems.gr'
+  apiURL: 'http://localhost:3000'
 };
