@@ -37,7 +37,7 @@
 #wholepage {
   width: auto;
   height: auto;
-  background: url("./images/mybb.jpg") no-repeat center center fixed;
+  background: url("./assets/images/mybb.jpg") no-repeat center center fixed;
   opacity: .99;
   z-index: -3;
   -webkit-background-size: cover;
@@ -49,7 +49,7 @@
 }
 
 #homecenter {
-  background: url("./images/girl.jpg") no-repeat center center;
+  background: url("./assets/images/girl.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
