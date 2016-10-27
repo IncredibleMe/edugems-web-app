@@ -13,6 +13,7 @@ import {ProfileComponent} from "./profile/profile.component";
 import {LoggedInGuard} from "./logged-in.guard";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {ApiService} from "./api.service";
+import {ReCaptchaModule} from 'angular2-recaptcha';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {ApiService} from "./api.service";
       {path: '', component: HomeComponent},
       {path: '**', component: PageNotFoundComponent}
     ]),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ReCaptchaModule
   ],
   providers: [ApiService, LoggedInGuard],
   bootstrap: [AppComponent]

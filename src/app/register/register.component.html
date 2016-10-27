@@ -9,41 +9,46 @@
         <h2 class="mdl-card__title-text">Εγγραφή</h2>
       </div>
 
-      <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="regForm" (ngSubmit)="register(regForm.value)">
         <div class="form-group">
           <div class="mdl-card__supporting-text">
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="username" class="mdl-textfield__input" type="text" id="username" formControlName="username">
-              <div *ngIf="formErrors.username" class="alert alert-danger">
-                {{ formErrors.name }}
-              </div>
               <label class="mdl-textfield__label">Όνομα χρήστη</label>
             </div>
+            <div *ngIf="formErrors.username" class="alert alert-danger error-alert"> {{ formErrors.username }}</div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="password" class="mdl-textfield__input" type="password" id="password" formControlName="password">
               <label class="mdl-textfield__label">Κωδικός</label>
             </div>
+            <div *ngIf="formErrors.password" class="alert alert-danger error-alert"> {{ formErrors.password }}</div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="email" class="mdl-textfield__input" type="email" id="email" formControlName="email">
               <label class="mdl-textfield__label">Email</label>
             </div>
+            <div *ngIf="formErrors.email" class="alert alert-danger error-alert"> {{ formErrors.email }}</div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="name" class="mdl-textfield__input" type="text" id="name" formControlName="name">
               <label class="mdl-textfield__label">Όνομα</label>
             </div>
+            <div *ngIf="formErrors.name" class="alert alert-danger error-alert"> {{ formErrors.name }}</div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="surname" class="mdl-textfield__input" type="text" id="surname" formControlName="surname">
               <label class="mdl-textfield__label">Επώνυμο</label>
             </div>
+            <div *ngIf="formErrors.surname" class="alert alert-danger error-alert"> {{ formErrors.surname }}</div>
 
           </div>
+          <!--<div id="captha-push__left"></div>-->
+          <re-captcha site_key="6LdtegoUAAAAAAef4jcldNTMvrJPVuP1TAd17o-S"></re-captcha>
           <div class="mdl-card__actions mdl-card--border">
             <button type="submit"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               Μπες στην παρεα
             </button>
           </div>
         </div>
+
       </form>
     </div>
 

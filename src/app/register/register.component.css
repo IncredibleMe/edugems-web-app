@@ -81,3 +81,19 @@
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
 }
+
+.error-alert {
+  margin-top: -10px;
+  color: crimson;
+}
+
+#captha-push__left {
+  float: left;
+  height: 30px;
+  width: 10em;
+}
+
+div.g-recaptcha {
+  margin: 0 auto;
+  width: 304px;
+}

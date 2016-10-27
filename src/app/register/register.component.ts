@@ -27,22 +27,23 @@ export class RegisterComponent implements OnInit {
     this.buildForm();
   }
 
+
   register(form: any): void {
     console.log('Form Data: ');
-    console.log(form);
-    this.api.register(form).subscribe(
+    console.log(this.regForm.value);
+    this.api.register(this.regForm.value).subscribe(
       (result) => {
         if (result) {
           this.router.navigate(['login']);
         }
       },
       error => {
-        var snackbarContainer = this.el.nativeElement.querySelector("#toast_Error")
+        //pjvar snackbarContainer = this.el.nativeElement.querySelector("#toast_Error")
         var data = {
           message: error.json().error,
           timeout: 3000
         };
-        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+        //snackbarContainer.MaterialSnackbar.showSnackbar(data);
       });
   }
 
@@ -71,6 +72,7 @@ export class RegisterComponent implements OnInit {
 
       if (control && control.dirty && !control.valid) {
         const messages = this.validationMessages[field];
+        console.log(messages);
         for (const key in control.errors) {
           this.formErrors[field] += messages[key] + ' ';
         }
@@ -79,13 +81,40 @@ export class RegisterComponent implements OnInit {
   }
 
   formErrors = {
-    'username': ''
+    'username': '',
+    'password': '',
+    'email': '',
+    'name': '',
+    'surname': ''
   };
 
   validationMessages = {
     'username': {
-      'required': 'username is required.'
-    }
+      'required': 'username is required.',
+      'minlength': 'Userame must be at least 4 characters long.',
+      'maxlength': 'Username cannot be more than 24 characters long.',
+    },
+    'password': {
+      'required': 'password is required.',
+      'minlength': 'Userame must be at least 4 characters long.',
+      'maxlength': 'Username cannot be more than 24 characters long.',
+    },
+    'email': {
+      'required': 'email is required.',
+      'minlength': 'Userame must be at least 4 characters long.',
+      'maxlength': 'Username cannot be more than 24 characters long.',
+    },
+    'name': {
+      'required': 'name is required.',
+      'minlength': 'Userame must be at least 4 characters long.',
+      'maxlength': 'Username cannot be more than 24 characters long.',
+    },
+    'surname': {
+      'required': 'surname is required.',
+      'minlength': 'Userame must be at least 4 characters long.',
+      'maxlength': 'Username cannot be more than 24 characters long.',
+    },
+
   };
 
 }
