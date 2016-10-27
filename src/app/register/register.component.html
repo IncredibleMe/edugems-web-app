@@ -2,41 +2,44 @@
 
 <div class="mdl-grid">
   <div class="mdl-layout-spacer"></div>
-  <div class="mdl-cell mdl-cell--4-col">
+  <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet mdl-cell--12-col-phone">
 
     <div class="demo-card-wide mdl-card mdl-shadow--6dp">
       <div class="mdl-card__title">
         <h2 class="mdl-card__title-text">Εγγραφή</h2>
       </div>
 
-      <form #form="ngForm" (ngSubmit)="register(form.value)">
+      <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <div class="mdl-card__supporting-text">
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-              <input name="username" class="mdl-textfield__input" type="text" id="username" ngModel>
+              <input name="username" class="mdl-textfield__input" type="text" id="username" formControlName="username">
+              <div *ngIf="formErrors.username" class="alert alert-danger">
+                {{ formErrors.name }}
+              </div>
               <label class="mdl-textfield__label">Όνομα χρήστη</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-              <input name="password" class="mdl-textfield__input" type="password" id="password" ngModel>
+              <input name="password" class="mdl-textfield__input" type="password" id="password" formControlName="password">
               <label class="mdl-textfield__label">Κωδικός</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-              <input name="email" class="mdl-textfield__input" type="text" id="email" ngModel>
+              <input name="email" class="mdl-textfield__input" type="email" id="email" formControlName="email">
               <label class="mdl-textfield__label">Email</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-              <input name="name" class="mdl-textfield__input" type="text" id="name" ngModel>
+              <input name="name" class="mdl-textfield__input" type="text" id="name" formControlName="name">
               <label class="mdl-textfield__label">Όνομα</label>
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-              <input name="surname" class="mdl-textfield__input" type="text" id="surname" ngModel>
+              <input name="surname" class="mdl-textfield__input" type="text" id="surname" formControlName="surname">
               <label class="mdl-textfield__label">Επώνυμο</label>
             </div>
 
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <button type="submit"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               Μπες στην παρεα
             </button>
           </div>

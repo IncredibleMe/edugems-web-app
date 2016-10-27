@@ -1,6 +1,6 @@
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import {AppComponent} from "./app.component";
 import {LoginComponent} from "./login/login.component";
@@ -36,7 +36,8 @@ import {ApiService} from "./api.service";
       {path: 'myprofile', component: ProfileComponent, canActivate: [LoggedInGuard]},
       {path: '', component: HomeComponent},
       {path: '**', component: PageNotFoundComponent}
-    ])
+    ]),
+    ReactiveFormsModule
   ],
   providers: [ApiService, LoggedInGuard],
   bootstrap: [AppComponent]
