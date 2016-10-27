@@ -1,13 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Hello</title>
+  <style>
+    div.container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .header__image {
+      padding: 9em;
+      color: white;
+      background-color: black;
+      clear: left;
+      text-align: center;
+      width:90%;
+      background-image: url("back1.jpg");
+      background-repeat: no-repeat;
+      background-size:cover;
+    }
+
+    .image--rounded{
+      border:10px solid white;
+      border-radius: 500px;
+      -webkit-border-radius: 500px;
+      -moz-border-radius: 500px;
+    }
+
+    #profile__image{
+      width: 200px;
+      height: 200px;
+      background-image: url('mer.jpg');
+      background-size: cover;
+      margin-left: 7em;
+      display: block;
+      float:left;
+    }
+
+    #profile__name{
+      float:left;
+      font-size: 1.875em;
+      font-weight: bold;
+      font-family: Serif;
+      margin-top: 2.6em;
+      margin-left: 1em;
+    }
+
+    #header__info{
+      margin-top: -100px;
+    }
+
+    .info{
+      width: 15em;
+      background-color: #00224f;
+      height: 60%;
+      font-family: "Lucida Bright",Georgia,serif;
+      color: white;
+      padding-left: 5em;
+      padding-top:3em;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 </head>
+
 <body>
-<br>
-<br>
-<br>
-This is your profile here
+<div class="container">
+  <div class="header__image">
+  </div>
+  <div id="header__info">
+    <div class="image--rounded" id="profile__image"></div>
+    <div id="profile__name">Mersini Metheniti</div>
+  </div>
+  <div class="info">
+    <h3>Name:</h3> Mersini<br>
+    <h3>Surname:</h3> Metheniti<br>
+    <h3>Age:</h3>19<br>
+    <h3>University:</h3> Aegean University<br>
+    <h3>Department:</h3> Icsd<br>
+    <br>
+  </div>
+</div>
 </body>
+
 </html>
