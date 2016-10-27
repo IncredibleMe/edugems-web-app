@@ -19,10 +19,13 @@ export class LoginComponent implements OnInit {
     console.log('Form Data: ');
     console.log(form);
     this.api.login(form).subscribe((result) => {
-      if (result) {
-        this.router.navigate(['myprofile']);
-      }
-    });
+        if (result) {
+          this.router.navigate(['myprofile']);
+        }
+      },
+      error => {
+        alert(error.json().message);
+      });
   }
 
 }

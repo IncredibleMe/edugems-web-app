@@ -1,44 +1,43 @@
-<div class="page-content" id="wholepage">
+<div id="background"></div>
 
-  <div id="form__elements--center">
-    <p>Welcome to EduGems!</p>
+<div class="mdl-grid">
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-cell mdl-cell--4-col">
 
-    <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
-      <div class="form-group">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-          <input name="username" class="mdl-textfield__input" type="text" id="username" ngModel>
-          <label class="mdl-textfield__label">Username</label>
-        </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-          <input name="password" class="mdl-textfield__input" type="password" id="password" ngModel>
-          <label class="mdl-textfield__label">Password</label>
-        </div>
 
-        <div class="form-group">
-          <button type="submit"
-                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit
-          </button>
-        </div>
+    <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Σύνδεση</h2>
       </div>
-    </form>
 
+      <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
+        <div class="form-group">
+          <div class="mdl-card__supporting-text">
 
-    <!--MATERIAL LITE FORM-->
-    <!--<form [formGroup]="form" (ngSubmit)="onSubmit()">-->
-    <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label floating">-->
-    <!--<input class="mdl-textfield__input" type="text" id="username">-->
-    <!--<label class="mdl-textfield__label">Username</label>-->
-    <!--</div>-->
-    <!--<div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label floating">-->
-    <!--<input class="mdl-textfield__input" type="text" id="password">-->
-    <!--<label class="mdl-textfield__label">Password</label>-->
-    <!--</div>-->
-    <!--<button type="submit" class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-button&#45;&#45;accent">-->
-    <!--Login-->
-    <!--</button>-->
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
+              <input name="username" class="mdl-textfield__input" type="text" id="username" ngModel>
+              <label class="mdl-textfield__label">Username</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
+              <input name="password" class="mdl-textfield__input" type="password" id="password" ngModel>
+              <label class="mdl-textfield__label">Password</label>
+            </div>
 
-    <!--</form>-->
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Get in
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
   </div>
+  <div class="mdl-layout-spacer"></div>
+</div>
 
+<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
 </div>
 
