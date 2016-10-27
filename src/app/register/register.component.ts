@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, ElementRef} from "@angular/core";
 import {Router} from "@angular/router";
 import {ApiService} from "../api.service";
 
@@ -9,7 +9,7 @@ import {ApiService} from "../api.service";
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(public router: Router, private api: ApiService) {
+  constructor(public router: Router, private api: ApiService, private el: ElementRef) {
   }
 
   ngOnInit() {
@@ -25,7 +25,12 @@ export class RegisterComponent implements OnInit {
         }
       },
       error => {
-        console.log(error.text());
+        var snackbarContainer = this.el.nativeElement.querySelector("#toast_Error")
+        var data = {
+          message: error.json().error,
+          timeout: 3000
+        };
+        snackbarContainer.MaterialSnackbar.showSnackbar(data);
       });
   }
 
