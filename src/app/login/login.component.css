@@ -85,7 +85,7 @@
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 117px;
-  background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+  background: url('../../assets/images/login_card.jpg') center / cover;
 }
 
 .demo-card-wide > .mdl-card__menu {
