@@ -9,6 +9,8 @@ import {ApiService} from "../api.service";
 })
 export class LoginComponent implements OnInit {
 
+  login: boolean = true;
+
   constructor(private router: Router, private api: ApiService, private el: ElementRef) {
   }
 
@@ -33,4 +35,26 @@ export class LoginComponent implements OnInit {
       });
   }
 
+  forgot_password(form: any): void {
+    console.log(form);
+    this.api.forgot_password(form).subscribe((result) => {
+        if (result) {
+          this.login = true;
+          var snackbarContainer = this.el.nativeElement.querySelector("#toast_Error")
+          var data = {
+            message: result.message + 'Ο κωδικός σου άλλαξε. Δες τα mail σου.',
+            timeout: 3000
+          };
+          snackbarContainer.MaterialSnackbar.showSnackbar(data);
+        }
+      },
+      error => {
+        var snackbarContainer = this.el.nativeElement.querySelector("#toast_Error")
+        var data = {
+          message: error.json().message,
+          timeout: 3000
+        };
+        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+      });
+  }
 }

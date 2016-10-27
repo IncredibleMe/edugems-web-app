@@ -1,10 +1,6 @@
 <html>
 <head>
   <style>
-    div.container {
-      width: 100%;
-      height: 100%;
-    }
 
     .header__image {
       padding: 9em;
@@ -30,7 +26,7 @@
       height: 200px;
       background-image: url('mer.jpg');
       background-size: cover;
-      margin-left: 7em;
+      margin-left: 2em;
       display: block;
       float:left;
     }
@@ -49,13 +45,15 @@
     }
 
     .info{
-      width: 15em;
+      width: 25em;
       background-color: #00224f;
-      height: 60%;
       font-family: "Lucida Bright",Georgia,serif;
       color: white;
+      text-align: left;
       padding-left: 5em;
-      padding-top:3em;
+      padding-top: 10em;
+      margin-top: -8.6em;
+      z-index: -1
     }
 
   </style>
@@ -66,12 +64,13 @@
 </head>
 
 <body>
-<div class="container">
-  <div class="header__image">
+<div class="mdl-grid mdl-grid--no-spacing">
+  <div class="header__image mdl-cell mdl-cell--12-col">
   </div>
-  <div id="header__info">
+  <div id="header__info" class= "mdl-cell mdl-cell--12-col">
     <div class="image--rounded" id="profile__image"></div>
     <div id="profile__name">Mersini Metheniti</div>
+
   </div>
   <div class="info">
     <h3>Name:</h3> Mersini<br>
@@ -81,7 +80,14 @@
     <h3>Department:</h3> Icsd<br>
     <br>
   </div>
+
+  <div>
+    No uploaded notes!
+  </div>
+
 </div>
+
+
 </body>
 
 </html>

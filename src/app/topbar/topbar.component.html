@@ -10,22 +10,23 @@
 
       <nav class="mdl-navigation mdl-layout--large-screen-only">
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect menub" routerLink="/home"
-                routerLinkActive="active">About Us
+                routerLinkActive="active">Ποιοι ειμαστε
         </button>
         <button *ngIf!="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
                 routerLink="/login"
-                routerLinkActive="active">Log In
+                routerLinkActive="active">Συνδεση
         </button>
 
         <button *ngIf="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
-                (click)="logout()">Log Out
+                (click)="logout()">Αποσυνδεση
         </button>
 
-        <button *ngIf!="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub" routerLink="/register"
-                routerLinkActive="active">Register
+        <button *ngIf!="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
+                routerLink="/register"
+                routerLinkActive="active">Εγγραφη
         </button>
       </nav>
-      <form id="search" action="#">
+      <form *ngIf="!logedin" id="search" action="#">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
           <label class="mdl-button mdl-js-button mdl-button--icon"
@@ -33,9 +34,9 @@
             <i class="material-icons">search</i>
           </label>
           <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" name="sample"
+            <input class="mdl-textfield__input" type="text" name="search"
                    id="fixed-header-drawer-exp">
-            <label class="mdl-textfield__label" for="fixed-header-drawer-exp"></label>
+            <label class="mdl-textfield__label" for="search">αναζήτηση</label>
           </div>
         </div>
       </form>
@@ -47,10 +48,10 @@
   <div class="mdl-layout__drawer mdl-layout--small-screen-only">
     <span class="mdl-layout-title">Edugems</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" routerLink="/">About Us</a>
-      <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/login" routerLinkActive="active">Log In</a>
-      <a class="mdl-navigation__link" *ngIf="logedin" click)="logout()">Log Out</a>
-      <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/register" routerLinkActive="active">Register</a>
+      <a class="mdl-navigation__link" routerLink="/">Ποίοι ειμαστε</a>
+      <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/login" routerLinkActive="active">Σύνδεση</a>
+      <a class="mdl-navigation__link" *ngIf="logedin" click)="logout()">Αποσύνδεση</a>
+      <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/register" routerLinkActive="active">Εγγραφή</a>
     </nav>
   </div>
 
