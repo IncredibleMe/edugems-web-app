@@ -1,16 +1,19 @@
 <!-- Always shows a header, even in smaller screens. -->
 <div mdl class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row dark-primary-color">
+    <div class="mdl-layout__header-row">
       <!-- Title -->
-      <a class="mdl-layout-title" routerLink="/home" routerLinkActive="active">EduGems</a>
+      <span class="mdl-layout-title" routerLink="/home" routerLinkActive="active">EduGems</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
 
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <button class="mdl-button mdl-js-button mdl-js-ripple-effect menub">About Us</button>
-        <button *ngIf!="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub" routerLink="/login"
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect menub" routerLink="/home"
+                routerLinkActive="active">About Us
+        </button>
+        <button *ngIf!="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
+                routerLink="/login"
                 routerLinkActive="active">Log In
         </button>
 
@@ -22,36 +25,37 @@
                 routerLink="/register"
                 routerLinkActive="active">Register
         </button>
-
-        <form id="sample-expandable" action="#">
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
-            <label class="mdl-button mdl-js-button mdl-button--icon"
-                   for="fixed-header-drawer-exp">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" name="sample"
-                     id="fixed-header-drawer-exp">
-              <label class="mdl-textfield__label" for="fixed-header-drawer-exp">Expandable Input</label>
-            </div>
-          </div>
-        </form>
       </nav>
+      <form id="search" action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+          <label class="mdl-button mdl-js-button mdl-button--icon"
+                 for="fixed-header-drawer-exp">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" name="sample"
+                   id="fixed-header-drawer-exp">
+            <label class="mdl-textfield__label" for="fixed-header-drawer-exp"></label>
+          </div>
+        </div>
+      </form>
     </div>
+
   </header>
 
   <!--Side drawer menu-->
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Title</span>
+  <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+    <span class="mdl-layout-title">Edugems</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
-      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" routerLink="/">About Us</a>
+      <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/login" routerLinkActive="active">Log In</a>
+      <a class="mdl-navigation__link" *ngIf="logedin" click)="logout()">Log Out</a>
+      <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/register" routerLinkActive="active">Register</a>
     </nav>
   </div>
 
 </div>
+
 
 <router-outlet (loggedInEmit)="onUpdate($event)"></router-outlet>
