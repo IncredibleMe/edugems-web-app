@@ -10,6 +10,7 @@ export class ApiService {
   public loggedIn;
   private apiLogin = environment.apiURL + '/auth/login';
   private apiRegister = environment.apiURL + '/auth/register';
+  private apiResetPassword = environment.apiURL + '/auth/resetpassword';
   success; // Added to suppress an error. Need further investigation.
 
   constructor(private http: Http) {
@@ -43,6 +44,15 @@ export class ApiService {
     let options = new RequestOptions({headers: headers});
 
     return this.http.post(this.apiRegister, body, options)
+      .map(this.extractData);
+  }
+
+  forgot_password(form: any) {
+    let body = JSON.stringify(form);
+    let headers = new Headers({'Content-Type': 'application/json'});
+    let options = new RequestOptions({headers: headers});
+
+    return this.http.post(this.apiResetPassword, body, options)
       .map(this.extractData);
   }
 

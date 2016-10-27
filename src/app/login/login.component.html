@@ -14,20 +14,36 @@
         <div class="form-group">
           <div class="mdl-card__supporting-text">
 
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
+            <div *ngIf="login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="username" class="mdl-textfield__input" type="text" id="username" ngModel>
-              <label class="mdl-textfield__label">Username</label>
+              <label class="mdl-textfield__label">Όνομα Χρήστη</label>
             </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
+            <div *ngIf="login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="password" class="mdl-textfield__input" type="password" id="password" ngModel>
-              <label class="mdl-textfield__label">Password</label>
+              <label class="mdl-textfield__label">Κωδικός</label>
             </div>
-
+            <div *ngIf="!login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
+              <input name="email" class="mdl-textfield__input" type="email" id="email" ngModel>
+              <label class="mdl-textfield__label">Email</label>
+            </div>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              Get in
+            <button *ngIf="login" type="submit"
+                    class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Συνδεσου στο παρεακι
             </button>
+            <a *ngIf="login" (click)="login=false"
+               class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+              Ξεχασες τον κωδικο σου?
+            </a>
+            <a *ngIf="!login" (click)="forgot_password(form.value)"
+               class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              επαναφορα κωδικου
+            </a>
+            <a *ngIf="!login" (click)="login=true"
+               class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+              συνδεση
+            </a>
           </div>
         </div>
       </form>
