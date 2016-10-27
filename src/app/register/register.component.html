@@ -3,31 +3,30 @@
   <div id="form__elements--center">
     <p>Welcome to EduGems!</p>
 
-
-    <form [formGroup]="regForm" (ngSubmit)="register(form.value)">
+    <form #form="ngForm" (ngSubmit)="register(form.value)">
       <div class="form-group">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-          <input name="username" class="mdl-textfield__input" id="username" type="text" formControlName="username">
+          <input name="username" class="mdl-textfield__input" type="text" id="username" ngModel>
           <label class="mdl-textfield__label">Username</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-          <input name="password" class="mdl-textfield__input" id="password" type="password" formControlName="password">
+          <input name="password" class="mdl-textfield__input" type="password" id="password" ngModel>
           <label class="mdl-textfield__label">Password</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-          <input name="password" class="mdl-textfield__input" type="password" formControlName="password2">
+          <input name="password" class="mdl-textfield__input" type="password" id="password2" ngModel>
           <label class="mdl-textfield__label">Retype Password</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-          <input name="email" class="mdl-textfield__input" type="email" id="email" formControlName="email">
+          <input name="email" class="mdl-textfield__input" type="text" id="email" ngModel>
           <label class="mdl-textfield__label">Email</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-          <input name="name" class="mdl-textfield__input" type="text" id="name" formControlName="name">
+          <input name="name" class="mdl-textfield__input" type="text" id="name" ngModel>
           <label class="mdl-textfield__label">Name</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-          <input name="surname" class="mdl-textfield__input" type="text" id="surname" formControlName="surname" required>
+          <input name="surname" class="mdl-textfield__input" type="text" id="surname" ngModel>
           <label class="mdl-textfield__label">Surname</label>
         </div>
 
@@ -57,9 +56,22 @@
   <!--<button type="submit" class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-button&#45;&#45;accent">-->
   <!--Login-->
   <!--</button>-->
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Μπες στην παρεα
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
 
-  <!--</form>-->
+  </div>
+  <div class="mdl-layout-spacer"></div>
+</div>
 
-
+<div id="toast_Error" #toastError class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
 </div>
 

@@ -11,6 +11,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   regForm : FormGroup;
 
+  constructor(public router: Router, private api: ApiService, private el: ElementRef) {
   constructor(private fb: FormBuilder, public router: Router, private api: ApiService) {
   }
 
@@ -44,7 +45,12 @@ export class RegisterComponent implements OnInit {
         }
       },
       error => {
-        console.log(error.text());
+        var snackbarContainer = this.el.nativeElement.querySelector("#toast_Error")
+        var data = {
+          message: error.json().error,
+          timeout: 3000
+        };
+        snackbarContainer.MaterialSnackbar.showSnackbar(data);
       });
   }
 
