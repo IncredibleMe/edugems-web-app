@@ -8,11 +8,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+
   <script type="application/javascript" src="https://code.getmdl.io/1.1.3/material.min.js"></script>
-  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css" rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Permanent+Marker:400' rel='stylesheet' type='text/css'>
+
+  <style>
+    /*Spinner*/
+    .spinner {
+      margin: 100px auto 0;
+      width: 70px;
+      text-align: center;
+    }
+
+    .spinner > div {
+      width: 18px;
+      height: 18px;
+      background-color: #5853d9;
+
+      border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+      animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+
+    .spinner .bounce1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+
+    .spinner .bounce2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+
+    @-webkit-keyframes sk-bouncedelay {
+      0%, 80%, 100% {
+        -webkit-transform: scale(0)
+      }
+      40% {
+        -webkit-transform: scale(1.0)
+      }
+    }
+
+    /*Font*/
+    .kir {
+      color: #fff;
+      text-align: center;
+      background-image: url(./assets/images/intro.jpg);
+      background-size: cover;
+      background-color: #d2bd9c;
+      font-family: 'Permanent Marker', sans-serif;
+      text-transform: uppercase;
+      line-height: 3em;
+      padding-top: 12em;
+      padding-bottom: 13em;
+      height: 58vh;
+    }
+
+    .kir-r1 {
+      line-height: 1em;
+      font-size: 17em;
+      font-weight: 100;
+      color: #fff;
+    }
+
+    .kir-r2 {
+      line-height: 1em;
+      margin-top: -2em;
+      font-size: 5.5em;
+      color: #ff7031;
+    }
+  </style>
 </head>
 <body>
-  <app-root>Loading...</app-root>
+<app-root>
+  <div class="kir">
+    <h1 class="kir-r1">Terrorize</h1>
+    <h2 class="kir-r2">that</h2>
+    <img src="./assets/images/pussy.svg" height="150px"/>
+
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+</app-root>
+
 </body>
 </html>
