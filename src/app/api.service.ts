@@ -30,10 +30,8 @@ export class ApiService {
             this.loggedInEmit.emit(true);
           }
           return response.success;
-        }
-        ,
+        },
         error => {
-          alert(error.text());
           console.log(error.text());
         }
       );
