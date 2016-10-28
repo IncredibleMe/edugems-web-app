@@ -26,7 +26,7 @@
                 routerLinkActive="active">Εγγραφη
         </button>
       </nav>
-      <form *ngIf="!logedin" id="search" action="#">
+      <form *ngIf="logedin" id="search" action="#">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
           <label class="mdl-button mdl-js-button mdl-button--icon"
@@ -50,7 +50,7 @@
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" routerLink="/">Ποίοι ειμαστε</a>
       <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/login" routerLinkActive="active">Σύνδεση</a>
-      <a class="mdl-navigation__link" *ngIf="logedin" click)="logout()">Αποσύνδεση</a>
+      <a class="mdl-navigation__link" *ngIf="logedin" (click)="logout()">Αποσύνδεση</a>
       <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/register" routerLinkActive="active">Εγγραφή</a>
     </nav>
   </div>
