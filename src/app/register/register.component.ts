@@ -3,6 +3,8 @@ import {Router} from "@angular/router";
 import {ApiService} from "../api.service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
+const emailValidator = Validators.pattern(".*@.*aua.gr|auth.gr|asfa.gr|aueb.gr|duth.gr|aeaa.gr|aeahk.gr|aeath.gr|aeavellas.gr|hua.gr|eap.gr|ihu.edu.gr|ionio.gr|uoa.gr|ntua.gr|panteion.gr|tuc.gr|aegean.gr|uoc.gr|uoi.gr|uom.gr|upatras.gr|uop.gr|unipi.gr|uth.gr|uowm.gr|teipir.gr|teithe.gr|aspete.gr|teiath.gr|teiste.gr|teiser.gr|teicrete.gr|teikav.edu.gr|teiep.gr|teiion.gr|teikal.gr|teilar.gr|teiwest.gr|teikoz.gr");
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -57,7 +59,7 @@ export class RegisterComponent implements OnInit,AfterViewInit {
     this.regForm = this.fb.group({
       'username': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
       'password': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
-      'email': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
+      'email': [null, [Validators.required, emailValidator]],
       'name': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
       'surname': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
 
@@ -107,8 +109,7 @@ export class RegisterComponent implements OnInit,AfterViewInit {
     },
     'email': {
       'required': 'email is required.',
-      'minlength': 'Userame must be at least 4 characters long.',
-      'maxlength': 'Username cannot be more than 24 characters long.',
+      'pattern': 'Το mail πρέπει να είναι ακαδημαικό. π.χ. icsd@aegean.gr',
     },
     'name': {
       'required': 'name is required.',
