@@ -13,7 +13,8 @@ import {ProfileComponent} from "./profile/profile.component";
 import {LoggedInGuard} from "./logged-in.guard";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {ApiService} from "./api.service";
-import {ReCaptchaModule} from 'angular2-recaptcha';
+import {ReCaptchaModule} from "angular2-recaptcha";
+import {PasswordStrengthComponent} from "./register/password-strength/password-strength.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {ReCaptchaModule} from 'angular2-recaptcha';
     TopbarComponent,
     HomeComponent,
     ProfileComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PasswordStrengthComponent
   ],
   imports: [
     BrowserModule,
@@ -44,4 +46,5 @@ import {ReCaptchaModule} from 'angular2-recaptcha';
   providers: [ApiService, LoggedInGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

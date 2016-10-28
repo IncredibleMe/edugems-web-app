@@ -22,7 +22,9 @@
               <input name="password" class="mdl-textfield__input" type="password" id="password" formControlName="password">
               <label class="mdl-textfield__label">Κωδικός</label>
             </div>
-            <div *ngIf="formErrors.password" class="alert alert-danger error-alert"> {{ formErrors.password }}</div>
+            <app-password-strength class="error-alert"
+                                   [passwordToCheck]="regForm.value.password"></app-password-strength>
+            <!--<div *ngIf="formErrors.password" class="alert alert-danger error-alert"> {{ formErrors.password }}</div>-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="email" class="mdl-textfield__input" type="email" id="email" formControlName="email">
               <label class="mdl-textfield__label">Email</label>
