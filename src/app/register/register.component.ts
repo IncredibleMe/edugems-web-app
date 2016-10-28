@@ -12,7 +12,8 @@ const emailValidator = Validators.pattern(".*@.*aua.gr|auth.gr|asfa.gr|aueb.gr|d
 })
 export class RegisterComponent implements OnInit,AfterViewInit {
 
-  regForm:FormGroup;
+  public regForm: FormGroup;
+  public disableForm = false;
 
   constructor(private fb:FormBuilder, public router: Router, private api: ApiService, private el: ElementRef) {
     this.regForm = fb.group({
@@ -60,8 +61,8 @@ export class RegisterComponent implements OnInit,AfterViewInit {
       'username': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
       'password': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
       'email': [null, [Validators.required, emailValidator]],
-      'name': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
-      'surname': [null, [Validators.required, Validators.minLength(4), Validators.maxLength(24)]],
+      'name': [null, [Validators.required, Validators.minLength(3), Validators.maxLength(24)]],
+      'surname': [null, [Validators.required, Validators.minLength(3), Validators.maxLength(24)]],
 
     });
     this.regForm.valueChanges
@@ -98,28 +99,28 @@ export class RegisterComponent implements OnInit,AfterViewInit {
 
   validationMessages = {
     'username': {
-      'required': 'username is required.',
-      'minlength': 'Userame must be at least 4 characters long.',
-      'maxlength': 'Username cannot be more than 24 characters long.',
+      'required': 'Είναι υποχρεωτικό.',
+      'minlength': 'Πρέπει να είναι τουλάχιστον 4 χαρακτήρες.',
+      'maxlength': 'Το μέγιστο είναι 24 χαρακτήρες.',
     },
     'password': {
-      'required': 'password is required.',
-      'minlength': 'Userame must be at least 4 characters long.',
-      'maxlength': 'Username cannot be more than 24 characters long.',
+      'required': 'Είναι υποχρεωτικό.',
+      'minlength': 'Πρέπει να είναι τουλάχιστον 4 χαρακτήρες.',
+      'maxlength': 'Το μέγιστο είναι 24 χαρακτήρες.',
     },
     'email': {
-      'required': 'email is required.',
-      'pattern': 'Το mail πρέπει να είναι ακαδημαικό. π.χ. icsd@aegean.gr',
+      'required': 'Είναι υποχρεωτικό.',
+      'pattern': 'Το mail πρέπει να είναι ακαδημαικό, π.χ. icsd@aegean.gr',
     },
     'name': {
-      'required': 'name is required.',
-      'minlength': 'Userame must be at least 4 characters long.',
-      'maxlength': 'Username cannot be more than 24 characters long.',
+      'required': 'Είναι υποχρεωτικό.',
+      'minlength': 'Πρέπει να είναι τουλάχιστον 3 χαρακτήρες.',
+      'maxlength': 'Το μέγιστο είναι 24 χαρακτήρες.',
     },
     'surname': {
-      'required': 'surname is required.',
-      'minlength': 'Userame must be at least 4 characters long.',
-      'maxlength': 'Username cannot be more than 24 characters long.',
+      'required': 'Είναι υποχρεωτικό.',
+      'minlength': 'Πρέπει να είναι τουλάχιστον 3 χαρακτήρες.',
+      'maxlength': 'Το μέγιστο είναι 24 χαρακτήρες.',
     },
 
   };

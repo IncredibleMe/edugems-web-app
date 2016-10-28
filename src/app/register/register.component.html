@@ -47,7 +47,8 @@
             <re-captcha id="myrecaptcha" site_key="6LdtegoUAAAAAAef4jcldNTMvrJPVuP1TAd17o-S"></re-captcha>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <button type="submit"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <button [disabled]="!regForm.valid" type="submit"
+                    class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               Μπες στην παρεα
             </button>
           </div>
