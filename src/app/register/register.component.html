@@ -22,8 +22,10 @@
               <input name="password" class="mdl-textfield__input" type="password" id="password" formControlName="password">
               <label class="mdl-textfield__label">Κωδικός</label>
             </div>
-            <app-password-strength class="error-alert"
-                                   [passwordToCheck]="regForm.value.password"></app-password-strength>
+            <div style="margin-top:-20px;">
+              <app-password-strength [passwordToCheck]="regForm.value.password"></app-password-strength>
+            </div>
+
             <!--<div *ngIf="formErrors.password" class="alert alert-danger error-alert"> {{ formErrors.password }}</div>-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
               <input name="email" class="mdl-textfield__input" type="email" id="email" formControlName="email">
@@ -41,9 +43,9 @@
             </div>
             <div *ngIf="formErrors.surname" class="alert alert-danger error-alert"> {{ formErrors.surname }}</div>
 
+            <!--<div id="captha-push__left"></div>-->
+            <re-captcha id="myrecaptcha" site_key="6LdtegoUAAAAAAef4jcldNTMvrJPVuP1TAd17o-S"></re-captcha>
           </div>
-          <!--<div id="captha-push__left"></div>-->
-          <re-captcha site_key="6LdtegoUAAAAAAef4jcldNTMvrJPVuP1TAd17o-S"></re-captcha>
           <div class="mdl-card__actions mdl-card--border">
             <button type="submit"  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               Μπες στην παρεα

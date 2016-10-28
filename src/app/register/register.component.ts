@@ -1,14 +1,14 @@
-import {Component, OnInit, ElementRef} from "@angular/core";
+import {Component, OnInit, ElementRef, AfterViewInit} from "@angular/core";
 import {Router} from "@angular/router";
 import {ApiService} from "../api.service";
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnInit,AfterViewInit {
 
   regForm:FormGroup;
 
@@ -25,6 +25,12 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+  }
+
+  ngAfterViewInit() {
+    var recaptcha = this.el.nativeElement.querySelector("#myrecaptcha").firstChild;
+    var innerchild = recaptcha.firstChild;
+    recaptcha.setAttribute('style', 'width: 304px; height: 78px; margin-left:auto;margin-right: auto;');
   }
 
 
