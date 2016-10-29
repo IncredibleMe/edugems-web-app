@@ -1,0 +1,40 @@
+@import "https://fonts.googleapis.com/css?family=Permanent+Marker:400";
+
+/*Font*/
+.error-body {
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  font-family: Permanent Marker, serif;
+  background-image: url('../../assets/images/intro.jpg');
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: auto;
+  height: auto;
+  min-height: 100vh !important;
+  position: relative;
+}
+
+.inner-message {
+  padding-top: 25vh;
+}
+
+.gtd-r1 {
+  font-size: 3em;
+  line-height: 1em;
+  size: auto;
+}
+
+.gtd-r2 {
+  font-size: 6em;
+  line-height: 1.1em;
+}
+
+.gtd-r3 {
+  font-size: 21em;
+  line-height: 0.72em;
+}
