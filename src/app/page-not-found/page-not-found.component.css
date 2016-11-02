@@ -5,7 +5,6 @@
   color: #fff;
   text-align: center;
   font-size: 1em;
-  font-family: Permanent Marker, serif;
   background-image: url('../../assets/images/intro.jpg');
   background-size: cover;
   -webkit-background-size: cover;
@@ -24,17 +23,20 @@
 }
 
 .gtd-r1 {
+  font-family: Permanent Marker, serif;
   font-size: 3em;
   line-height: 1em;
   size: auto;
 }
 
 .gtd-r2 {
+  font-family: Permanent Marker, serif;
   font-size: 6em;
   line-height: 1.1em;
 }
 
 .gtd-r3 {
+  font-family: Permanent Marker, serif;
   font-size: 21em;
   line-height: 0.72em;
 }
