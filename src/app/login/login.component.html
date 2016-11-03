@@ -1,59 +1,60 @@
-<div id="background"></div>
+<app-background>
 
-<div class="mdl-grid">
-  <div class="mdl-layout-spacer"></div>
-  <div class="mdl-cell mdl-cell--4-col">
+  <div class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--4-col">
 
 
-    <div class="demo-card-wide mdl-card mdl-shadow--6dp">
-      <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Σύνδεση</h2>
+      <div class="demo-card-wide mdl-card mdl-shadow--6dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">Σύνδεση</h2>
+        </div>
+
+        <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
+          <div class="form-group">
+            <div class="mdl-card__supporting-text">
+
+              <div *ngIf="login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
+                <input name="username" class="mdl-textfield__input" type="text" id="username" ngModel>
+                <label class="mdl-textfield__label">Όνομα Χρήστη</label>
+              </div>
+              <div *ngIf="login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
+                <input name="password" class="mdl-textfield__input" type="password" id="password" ngModel>
+                <label class="mdl-textfield__label">Κωδικός</label>
+              </div>
+              <div *ngIf="!login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
+                <input name="email" class="mdl-textfield__input" type="email" id="email" ngModel>
+                <label class="mdl-textfield__label">Email</label>
+              </div>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button *ngIf="login" type="submit"
+                      class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Συνδεσου στο παρεακι
+              </button>
+              <a *ngIf="login" (click)="login=false"
+                 class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+                Ξεχασες τον κωδικο σου?
+              </a>
+              <a *ngIf="!login" (click)="forgot_password(form.value)"
+                 class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                επαναφορα κωδικου
+              </a>
+              <a *ngIf="!login" (click)="login=true"
+                 class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
+                συνδεση
+              </a>
+            </div>
+          </div>
+        </form>
       </div>
 
-      <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
-        <div class="form-group">
-          <div class="mdl-card__supporting-text">
-
-            <div *ngIf="login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-              <input name="username" class="mdl-textfield__input" type="text" id="username" ngModel>
-              <label class="mdl-textfield__label">Όνομα Χρήστη</label>
-            </div>
-            <div *ngIf="login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-              <input name="password" class="mdl-textfield__input" type="password" id="password" ngModel>
-              <label class="mdl-textfield__label">Κωδικός</label>
-            </div>
-            <div *ngIf="!login" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label floating">
-              <input name="email" class="mdl-textfield__input" type="email" id="email" ngModel>
-              <label class="mdl-textfield__label">Email</label>
-            </div>
-          </div>
-          <div class="mdl-card__actions mdl-card--border">
-            <button *ngIf="login" type="submit"
-                    class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              Συνδεσου στο παρεακι
-            </button>
-            <a *ngIf="login" (click)="login=false"
-               class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
-              Ξεχασες τον κωδικο σου?
-            </a>
-            <a *ngIf="!login" (click)="forgot_password(form.value)"
-               class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-              επαναφορα κωδικου
-            </a>
-            <a *ngIf="!login" (click)="login=true"
-               class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect">
-              συνδεση
-            </a>
-          </div>
-        </div>
-      </form>
     </div>
-
+    <div class="mdl-layout-spacer"></div>
   </div>
-  <div class="mdl-layout-spacer"></div>
-</div>
 
-<div id="toast_Error" #toastError class="mdl-js-snackbar mdl-snackbar">
-  <div class="mdl-snackbar__text"></div>
-  <button class="mdl-snackbar__action" type="button"></button>
-</div>
+  <div id="toast_Error" #toastError class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
+  </div>
+</app-background>
