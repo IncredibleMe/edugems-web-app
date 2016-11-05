@@ -15,6 +15,8 @@ import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {ApiService} from "./api.service";
 import {ReCaptchaModule} from "angular2-recaptcha";
 import {PasswordStrengthComponent} from "./register/password-strength/password-strength.component";
+import {BackgroundComponent} from "./background/background.component";
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import {PasswordStrengthComponent} from "./register/password-strength/password-s
     HomeComponent,
     ProfileComponent,
     PageNotFoundComponent,
-    PasswordStrengthComponent
+    PasswordStrengthComponent,
+    BackgroundComponent
   ],
   imports: [
     BrowserModule,
