@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURL: 'http://api.edugems.gr'
+  apiURL: 'https://api.edugems.gr'
 };
