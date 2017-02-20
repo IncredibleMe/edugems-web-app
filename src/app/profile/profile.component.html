@@ -5,7 +5,7 @@
     .header__image {
       padding: 9em;
       color: white;
-      background-color: black;
+      /*background-color: black;*/
       clear: left;
       text-align: center;
       width:90%;
@@ -46,7 +46,6 @@
 
     .info{
       width: 25em;
-      background-color: #00224f;
       font-family: "Lucida Bright",Georgia,serif;
       color: white;
       text-align: left;
@@ -64,28 +63,31 @@
 </head>
 
 <body>
-<div class="mdl-grid mdl-grid--no-spacing">
-  <div class="header__image mdl-cell mdl-cell--12-col">
-  </div>
-  <div id="header__info" class= "mdl-cell mdl-cell--12-col">
-    <div class="image--rounded" id="profile__image"></div>
-    <div id="profile__name">Mersini Metheniti</div>
+<div class="blur-background"></div>
+<!--<div class="mdl-grid mdl-grid&#45;&#45;no-spacing">-->
+  <!--<div class="header__image mdl-cell mdl-cell&#45;&#45;12-col">-->
+  <!--</div>-->
+  <!--<div id="header__info" class= "mdl-cell mdl-cell&#45;&#45;12-col">-->
+    <!--<div class="image&#45;&#45;rounded" id="profile__image"></div>-->
+    <!--<div id="profile__name">Mersini Metheniti</div>-->
+
+<md-card class="example-card">
+  <div class="image-header">
+    <img src="../../assets/images/yosemite.jpg">
 
   </div>
-  <div class="info">
-    <h3>Name:</h3> Mersini<br>
-    <h3>Surname:</h3> Metheniti<br>
-    <h3>Age:</h3>19<br>
-    <h3>University:</h3> Aegean University<br>
-    <h3>Department:</h3> Icsd<br>
-    <br>
-  </div>
-
-  <div>
-    No uploaded notes!
-  </div>
-
-</div>
+  <md-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
 
 
 </body>

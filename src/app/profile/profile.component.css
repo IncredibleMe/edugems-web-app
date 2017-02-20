@@ -1,0 +1,39 @@
+.blur-background{
+  background:url('../../assets/images/yosemite.jpg');
+  background-size: cover;
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
+  position: absolute;
+  width : 100%;
+  height: 200%;
+}
+
+
+
+.example-card {
+  width: auto;
+}
+
+
+
+
+.image-header{
+  padding-left: 50px;
+  padding-top: 80px;
+  padding-right : 50px;
+  width: auto;
+  height: 200px;
+}
+
+.container {
+
+}
+
+/* resize images */
+.image-header img {
+  width: 100%;
+  height: auto;
+}

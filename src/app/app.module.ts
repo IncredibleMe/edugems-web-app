@@ -16,7 +16,9 @@ import {ApiService} from "./api.service";
 import {ReCaptchaModule} from "angular2-recaptcha";
 import {PasswordStrengthComponent} from "./register/password-strength/password-strength.component";
 import {BackgroundComponent} from "./background/background.component";
-
+import { MaterialModule } from '@angular/material';
+import { CommonModule } from '@angular/common';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import {BackgroundComponent} from "./background/background.component";
     BrowserModule,
     FormsModule,
     HttpModule,
+    CommonModule,
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: 'login', component: LoginComponent},
@@ -44,7 +47,8 @@ import {BackgroundComponent} from "./background/background.component";
       {path: '**', component: PageNotFoundComponent}
     ]),
     ReactiveFormsModule,
-    ReCaptchaModule
+    ReCaptchaModule,
+    MaterialModule.forRoot(),
   ],
   providers: [ApiService, LoggedInGuard],
   bootstrap: [AppComponent]
