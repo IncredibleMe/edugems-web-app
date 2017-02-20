@@ -1,4 +1,4 @@
-<!-- Always shows a header, even in smaller screens. -->
+
 <div mdl class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
@@ -12,7 +12,7 @@
         <button class="mdl-button mdl-js-button mdl-js-ripple-effect menub" routerLink="/home"
                 routerLinkActive="active">Ποιοι ειμαστε
         </button>
-        <button *ngIf!="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
+        <button *ngIf="!logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
                 routerLink="/login"
                 routerLinkActive="active">Συνδεση
         </button>
@@ -21,7 +21,7 @@
                 (click)="logout()">Αποσυνδεση
         </button>
 
-        <button *ngIf!="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
+        <button *ngIf="!logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
                 routerLink="/register"
                 routerLinkActive="active">Εγγραφη
         </button>
@@ -49,9 +49,9 @@
     <span class="mdl-layout-title">Edugems</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" routerLink="/">Ποίοι ειμαστε</a>
-      <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/login" routerLinkActive="active">Σύνδεση</a>
+      <a class="mdl-navigation__link" *ngIf="!logedin" routerLink="/login" routerLinkActive="active">Σύνδεση</a>
       <a class="mdl-navigation__link" *ngIf="logedin" (click)="logout()">Αποσύνδεση</a>
-      <a class="mdl-navigation__link" *ngIf!="logedin" routerLink="/register" routerLinkActive="active">Εγγραφή</a>
+      <a class="mdl-navigation__link" *ngIf="!logedin" routerLink="/register" routerLinkActive="active">Εγγραφή</a>
     </nav>
   </div>
 
