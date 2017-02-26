@@ -42,7 +42,9 @@ import 'hammerjs';
       {path: 'home', component: HomeComponent},
       {path: 'login', component: LoginComponent},
       {path: 'register', component: RegisterComponent},
-      {path: 'myprofile', component: ProfileComponent, canActivate: [LoggedInGuard]},
+       {path: 'myprofile', component: ProfileComponent,
+      //   canActivate: [LoggedInGuard]
+       },
       {path: '', component: HomeComponent},
       {path: '**', component: PageNotFoundComponent}
     ]),

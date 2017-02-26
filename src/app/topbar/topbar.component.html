@@ -18,6 +18,11 @@
         </button>
 
         <button *ngIf="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
+                routerLink="/myprofile"
+                routerLinkActive="active">Προφίλ
+        </button>
+
+        <button *ngIf="logedin" class="mdl-button mdl-js-button mdl-js-ripple-effect menub"
                 (click)="logout()">Αποσυνδεση
         </button>
 
@@ -50,6 +55,7 @@
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" routerLink="/">Ποίοι ειμαστε</a>
       <a class="mdl-navigation__link" *ngIf="!logedin" routerLink="/login" routerLinkActive="active">Σύνδεση</a>
+      <a class="mdl-navigation__link" *ngIf="logedin" routerLink="/myprofile" routerLinkActive="active">Προφίλ</a>
       <a class="mdl-navigation__link" *ngIf="logedin" (click)="logout()">Αποσύνδεση</a>
       <a class="mdl-navigation__link" *ngIf="!logedin" routerLink="/register" routerLinkActive="active">Εγγραφή</a>
     </nav>
