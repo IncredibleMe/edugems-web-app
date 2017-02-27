@@ -29,6 +29,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  position: relative;
   /*float:left;*/
   z-index: 3;
 
@@ -94,34 +95,88 @@ body {
   /*padding-top:5px;*/
 }
 
-.container {
+#container {
 
 }
 
 .class-content{
   z-index: 10;
   color: white;
-  overflow: auto;
   position: relative;
 
 
 }
 
 .example-card {
-  padding-top : 125px;
-  width: 400px;
+  /*padding-top : 125px;*/
+  height: 150px;
+  width: 100%;
   position: absolute;
 }
 
 .profile-div__transparent {
-  background-image: url("../../assets/images/profile_div1.jpg");
-  z-index: -2;
+  position: relative;
+  z-index: 0;
 
+  padding-right: 0px !important;
+  padding-bottom: 25px !important;
+  padding-left: 0px !important;
+}
+
+#profile-div__first {
+  background-image: url("../../assets/images/blur1.jpg");
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#profile-div__second {
+  background-color: #22597E;
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#profile-div__third {
+  background-image: url("../../assets/images/blur1.jpg");
+  background-size: cover; /* <------ */
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.no-margin {
+  margin-right: 0px !important;
 }
 
 .div_content {
+  height: 100%;
+  width: 100%;
   color: white;
   font-weight: bold;
   font-family: fantasy;
+  font-size: 2em;
 
 }
+
+#wall {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 700px;
+  background-image: url("../../assets/images/wall.png");
+  background-size: cover;
+}
+
+.example-card2 {
+  background-color: azure;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+  float: left;
+}
+
+

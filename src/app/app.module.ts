@@ -18,6 +18,7 @@ import {PasswordStrengthComponent} from "./register/password-strength/password-s
 import {BackgroundComponent} from "./background/background.component";
 import { MaterialModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
+import {FlexLayoutModule} from "@angular/flex-layout";
 import 'hammerjs';
 
 @NgModule({
@@ -34,6 +35,7 @@ import 'hammerjs';
     BackgroundComponent
   ],
   imports: [
+    FlexLayoutModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
