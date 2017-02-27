@@ -1,3 +1,6 @@
+body {
+  position: relative;
+}
 
 .header__image {
   padding: 9em;
@@ -8,6 +11,7 @@
   width:90%;
   background-repeat: no-repeat;
   background-size:cover;
+
 }
 
 .image--rounded{
@@ -22,19 +26,23 @@
   height: 300px;
   background-image: url('../../assets/images/marcela.jpg');
   background-size: cover;
-  margin-left: 2em;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
-  float:left;
+  /*float:left;*/
+  z-index: 3;
+
 }
 
 #profile__name{
-  float:left;
   color: white;
   font-size: 2.675em;
   font-weight: bold;
   font-family: Serif;
-  margin-top: 4.2em;
-  margin-left: 1em;
+  margin-top: -9.2em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-align: center;
+  position: relative;
 }
 
 #header__info{
@@ -76,7 +84,7 @@
   background-image: url("../../assets/images/yosemite.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
+  z-index: 3;
   -webkit-box-shadow: 2px 10px 84px 11px rgba(5,5,5,1);
   -moz-box-shadow: 2px 10px 84px 11px rgba(5,5,5,1);
   box-shadow: 2px 10px 84px 11px rgba(5,5,5,1);
@@ -92,11 +100,28 @@
 
 .class-content{
   z-index: 10;
-  background-color: #e7e7e7;
+  color: white;
+  overflow: auto;
+  position: relative;
+
 
 }
 
 .example-card {
   padding-top : 125px;
   width: 400px;
+  position: absolute;
+}
+
+.profile-div__transparent {
+  background-image: url("../../assets/images/profile_div1.jpg");
+  z-index: -2;
+
+}
+
+.div_content {
+  color: white;
+  font-weight: bold;
+  font-family: fantasy;
+
 }
